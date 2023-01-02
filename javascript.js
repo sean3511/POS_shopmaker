@@ -50,7 +50,7 @@ $('.menu-grid-item.shop1').click(function(){
           ,
           $('<img/>')
           .addClass("remove-item")
-          .attr('src','/image/small_trashcan.svg')
+          .attr('src','image/small_trashcan.svg')
         )
       )
     )
@@ -70,7 +70,7 @@ $('.menu-grid-item.shop1').click(function(){
             $('<img/>')
             .addClass("cashier-shop-item-img")
             // 圖片位址
-            .attr('src',"/image/shop-item/salmon.jpg")
+            .attr('src',"image/shop-item/salmon.jpg")
             ,
             $('<div/>')
             .addClass("cashier-shop-item-fontGP")
@@ -106,7 +106,7 @@ $('.menu-grid-item.shop1').click(function(){
             ,
             $('<img/>')
             .addClass("remove-item")
-            .attr('src','/image/small_trashcan.svg')
+            .attr('src','image/small_trashcan.svg')
             )
             )
           )
@@ -127,7 +127,7 @@ $('.menu-grid-item.shop1').click(function(){
               $('<img/>')
               .addClass("cashier-shop-item-img")
               // 圖片位址
-              .attr('src',"/image/shop-item/ramen.jpg")
+              .attr('src',"image/shop-item/ramen.jpg")
               ,
               $('<div/>')
               .addClass("cashier-shop-item-fontGP")
@@ -163,7 +163,7 @@ $('.menu-grid-item.shop1').click(function(){
               ,
               $('<img/>')
               .addClass("remove-item")
-              .attr('src','/image/small_trashcan.svg')
+              .attr('src','image/small_trashcan.svg')
               )
               )
             )
@@ -183,7 +183,7 @@ $('.menu-grid-item.shop1').click(function(){
               $('<img/>')
               .addClass("cashier-shop-item-img")
               // 圖片位址
-              .attr('src',"/image/shop-item/soup.jpg")
+              .attr('src',"image/shop-item/soup.jpg")
               ,
               $('<div/>')
               .addClass("cashier-shop-item-fontGP")
@@ -219,7 +219,7 @@ $('.menu-grid-item.shop1').click(function(){
               ,
               $('<img/>')
               .addClass("remove-item")
-              .attr('src','/image/small_trashcan.svg')
+              .attr('src','image/small_trashcan.svg')
               )
               )
             )
