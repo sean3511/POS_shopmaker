@@ -13,7 +13,67 @@
     <div id="ipad-scene">
         <div id="overlay" onselectstart="return false">
             <div class="shop-item-panel">
-                <p>123</p>
+                <div class="shop-item-panel-title-gp">
+                    <p class="subtitle1 shop-item-panel-title">餐點名稱</p>
+                </div>
+                <div class="shop-item-panel-amount-gp">
+                    <p class="body2">數量</p>
+                    <div class="shop-item-panel-btn-gp">
+                        <button class="shop-item-panel-adds">
+                            <img src="image/shop_item_panel_add.svg" alt="">
+                        </button>
+                        <div class="shop-item-panel-item-amount">
+                            <p class="title1 shop-item-panel-item-amount-num color-dark5">10</p>
+                        </div>
+                        <button class="shop-item-panel-minus">
+                            <img src="image/shop_item_panel_minus.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="shop-item-penel-credit-gp">
+                    <p class="body2">折扣</p>
+                    <div class="shop-item-penel-credit-labelGP">
+                        <input type="radio" id="percentage" name="credit-panel"checked>
+                        <label for="percentage">百分比</label>
+
+                        <input type="radio" id="price" name="credit-panel">
+                        <label for="price">金額</label>
+
+                        <input type="radio" id="customize" name="credit-panel">
+                        <label for="customize">自訂</label>
+                    </div>
+                    <div class="shop-item-penel-credit-window">
+                        <div class="percentage-window">
+                            <div class="penel-list-mode-GP">
+                                <p class="subtitle2">折數名稱(選填)</p>
+                                <p class="body1 color-dark5">折扣</p>
+                            </div>
+                            <div class="penel-list-mode-GP">
+                                <p class="subtitle2">折扣</p>
+                                <p class="body1 color-dark5">75%</p>
+                            </div>
+                        </div>
+                        <div class="price-window">
+                            <div class="penel-list-mode-GP">
+                                <p class="subtitle2">折數名稱(選填)</p>
+                                <p class="body1 color-dark5">折扣</p>
+                            </div>
+                            <div class="penel-list-mode-GP">
+                                <p class="subtitle2">折扣</p>
+                                <p class="body1 color-dark5">$0</p>
+                            </div>
+                        </div>
+                        <div class="customize-window">
+                            <p class="subtitle2">您尚未設置自訂的折扣<br>
+                                請先到後台建立折扣活動</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-item-penel-credit-btn-gp">
+                    <button  class="button_mid">
+                        <p class="subtitle2 color-white">完成</p>
+                    </button>
+                </div>
             </div>
         </div>
         <div id="Page-cashier">

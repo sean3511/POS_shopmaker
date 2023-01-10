@@ -52,6 +52,8 @@ $(document).mouseup(function(e)
 
 $('.menu-grid-item.shop1').click(function(){
   // 商品牛排"
+  // 更換POPUP名稱
+  $('.shop-item-panel-title').html( $('.menu-grid-item.shop1 p').html());
   shop1_amount++;
   if(shop1_amount > 1) {
     return false;
@@ -116,6 +118,8 @@ $('.menu-grid-item.shop1').click(function(){
 
 
   $('.menu-grid-item.shop2').click(function(){
+      // 更換POPUP名稱
+  $('.shop-item-panel-title').html( $('.menu-grid-item.shop2 p').html());
     shop2_amount++;
     if(shop2_amount > 1) {
       return false;
@@ -179,6 +183,8 @@ $('.menu-grid-item.shop1').click(function(){
         );
   });
   $('.menu-grid-item.shop3').click(function(){
+        // 更換POPUP名稱
+  $('.shop-item-panel-title').html( $('.menu-grid-item.shop3 p').html());
     shop3_amount++;
     if(shop3_amount > 1) {
       return false;
@@ -243,6 +249,8 @@ $('.menu-grid-item.shop1').click(function(){
           );
     });
     $('.menu-grid-item.shop4').click(function(){
+          // 更換POPUP名稱
+  $('.shop-item-panel-title').html( $('.menu-grid-item.shop4 p').html());
       shop4_amount++;
       if(shop4_amount > 1) {
         return false;
@@ -304,3 +312,20 @@ $('.menu-grid-item.shop1').click(function(){
             )
           );
     });
+    $(".shop-item-penel-credit-labelGP").click(function(){
+      if($('#percentage').prop("checked")){
+        console.log("現在是百分比");
+      $(".shop-item-penel-credit-window > *").hide();
+        $('.percentage-window').css('display', 'flex');
+      }
+      if($('#price').prop("checked")){
+        console.log("現在是金額");
+        $(".shop-item-penel-credit-window > *").hide();
+          $('.price-window').css('display', 'flex');
+      }
+      if($('#customize').prop("checked")){
+        console.log("現在是自訂");
+        $(".shop-item-penel-credit-window > *").hide();
+          $('.customize-window').css('display', 'flex');
+      }
+    })
