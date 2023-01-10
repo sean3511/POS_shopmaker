@@ -6,12 +6,38 @@ body{
     justify-content: center;
     background-color: #fdfdfd
 }
-#ipad-scene{
-    width: 1194px;
-    height: 834px;
+#Page-cashier{
+    width: 100%;
+    height: 100%;
     background-color: aqua;
     display: flex;
     flex-direction: row;
+}
+#overlay{
+    position: absolute;
+    width: 1194px;
+    height: 834px;
+    /* background-color: red; */
+    z-index: 1000000;
+    display: none;
+    /* pointer-events:none; */
+    /* user-select: none; */
+}
+.shop-item-panel{
+    position: absolute;
+    width: 420px;
+    height: 468px;
+    left: 284px;
+    top: 87px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.73);
+    border-radius: 8px;
+    display: none;
+}
+#ipad-scene{
+    width: 1194px;
+    height: 834px;
+    position: relative;
 }
 img{
     cursor: pointer;
@@ -77,7 +103,6 @@ button{
 .flex-grow-max::-webkit-scrollbar {
     display: none;
   }
-  
 .menu-item-frame{
     padding: 20px;
     gap: 20px;
