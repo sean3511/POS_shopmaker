@@ -115,7 +115,12 @@ $('.menu-grid-item.shop1').click(function(){
     )
   );
   });
+  $(".btn-full-screen").click(function(){
+    screenfull.toggle();
+  });
 
+ 
+ 
 
   $('.menu-grid-item.shop2').click(function(){
       // 更換POPUP名稱
