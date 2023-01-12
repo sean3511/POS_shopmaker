@@ -410,5 +410,11 @@ $('.menu-grid-item.shop1').click(function(){
           )
       
     });
+    $(".btn-search").click(function(){
+      $(".search-bar").show();
+    });
+    $('.search-close').click(function(){
+      $(".search-bar").hide();
+    });
 
   
