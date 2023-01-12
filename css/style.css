@@ -380,6 +380,58 @@ button{
     justify-content: space-between;
     /* background-color: antiquewhite; */
 }
+.search-bar{
+    padding: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #7F7F7F;
+    border-bottom: 1px solid #E2E2E2;
+    display: none;
+}
+#fname{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    color: #7F7F7F;
+}
+:placeholder-shown{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #7F7F7F;
+}
+#fname:hover{
+    border: none;
+    background: none;
+    outline: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #7F7F7F;
+    /* display: none; */
+}
+.search-bar-GP{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    background: #FAFAFC;
+    border-radius: 30px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+.search-bar-GP-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.search-bar-GP-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
 .cashier-button-gp{
     display: flex;
     padding: 24px;
