@@ -46,19 +46,45 @@ $('.shop-item-panel').fadeIn(100);
 });
 //開啟購物車POPUP
 $('.menu-header-allitem').click(function(){
-  console.log(shop_car_amount);
   $('#overlay').fadeIn(100);
   $('.shop-car-GP').css("display", "flex").fadeIn(100);
 });
-
+// 開啟會員新增
+$('.btn-add-customer').click(function(){
+  $('.popup-client-newcustomer').fadeIn(100);
+});
+//開啟分類
+$('.btn-category').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.popup-category').fadeIn(100);
+});
+//開啟新增会员视窗
+$('.cashier-addcustomer').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.popup-client-GP').fadeIn(100);
+});
+$('.client_back').click(function(){
+  $('#overlay').fadeOut(100);
+  $(".popup-client-GP").fadeOut(100);
+});
+$('.client_back_second_level').click(function(){
+  $(".popup-client-newcustomer").fadeOut(100);
+});
+$('.onclick-btn').click(function(){
+    $('.popup-client-newcustomer').fadeOut(100);
+    $('.popup-client-GP').fadeOut(100);
+    $('.shop-item-panel').fadeOut(100);
+    $('.popup-category').fadeOut(100);
+    $('#overlay').fadeOut(100);
+});
 
   // 关闭视窗
 $(document).mouseup(function(e)
   { 
-  var pop = $('.shop-item-panel,.shop-car-GP,.add-shop-car');  
+  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category');  
   if(!pop.is(e.target) && pop.has(e.target).length === 0) { 
     $('#overlay').fadeOut(100);
-    $('.shop-item-panel,.shop-car-GP').fadeOut(100);
+    $('.shop-car-GP,.shop-item-panel,.popup-client-GP').fadeOut(100);
   }}
   );
   // $(document).mouseup(function(e)

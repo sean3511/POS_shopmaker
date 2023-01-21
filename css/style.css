@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* BUG除錯 */
 body{
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto','Noto Sans TC', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +47,6 @@ input[type=radio] { display: none }
     /* background-color: white; */
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.2));
     display: none;
-
 }
 .Shop-car-label{
     display: block;
@@ -141,14 +141,140 @@ height: 18px;
     box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.73);
     border-radius: 8px;
     display: none;
+    /* display: none; */
+}
+.client-cargo-address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+}
+.textbox{
+    height: 21px;
+}
+.client-textbox-GP{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+.client-button-GP{
+    display: flex;
+    padding: 0 24px 24px;
+}
+.textbox-outside{
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    background: #FAFAFC;
+    border-radius: 6px;
+}
+.textbox-GP{
+    display: flex;
+    flex-direction: column;
+}
+.category-list-gp{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0px;
+    gap: 8px;
+}
+.category-list-title{
+    padding: 0px 24px;
+    height: 36px;
+}
+.category-hrizon-padding{
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+    gap: 10px;
+    height: 52px;
+}
+.category-list-item{
+    border-top: 1px solid #E2E2E2;
+}
+.category-curcle{
+    width: 8px;
+    height: 8px;
+    /* main/primary */
+    background: #009EF7;
+    border-radius: 50%;
+}
+.popup-category{
+    position: absolute;
+    width: 420px;
+    height: 406px;
+    left: 127px;
+    top: 95px;
+
+    /* light/light01 */
+
+    background: #FFFFFF;
+    /* biggest_shadow */
+
+    box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.73);
+    border-radius: 8px;
+    display: none;
+}
+.popup-client-newcustomer{
+    position: absolute;
+    width: 420px;
+    left: 297px;
+    top: 71px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.73);
+    border-radius: 8px;
+    display: none;
 }
 .popup-client-title_GP{
     position: relative;
     display: flex;
     height: 56px;
-    border: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
     padding: 16px;
     box-sizing: border-box;
+}
+.popup-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    border-bottom: 1px solid #E2E2E2;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.popup-client-search-GP{
+    height: 72px;
+    padding: 16px;
+    border-bottom: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    gap:10px
+}
+.client-search-gp{
+    height: 40px;
+    background: #FAFAFC;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+    padding: 0 16px;
+    gap: 10px;
+}
+.client-btn-gp{
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #E2E2E2;
+}
+.client-inform-GP{
+    display: flex;
+    flex-direction: column;
+}
+.client-inform-message{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #E2E2E2;
 }
 .shop-item-panel{
     position: absolute;
@@ -267,6 +393,7 @@ button{
 }
 .body1{
     font-size: 16px;
+    font-weight:500;
 }
 .body2{
     font-size: 14px;
