@@ -53,6 +53,12 @@ $('.menu-header-allitem').click(function(){
 $('.btn-add-customer').click(function(){
   $('.popup-client-newcustomer').fadeIn(100);
 });
+// 開啟有種類選項的商品
+$('.item-types').click(function(){
+  $('#overlay').addClass('overlay-dark');
+  $('#overlay').fadeIn(100);
+  $('.popup-types-item').fadeIn(100);
+});
 //開啟分類
 $('.btn-category').click(function(){
   $('#overlay').fadeIn(100);
@@ -63,10 +69,37 @@ $('.cashier-addcustomer').click(function(){
   $('#overlay').fadeIn(100);
   $('.popup-client-GP').fadeIn(100);
 });
+// 點選開啟會員資料關閉新增會員
+$('.client-WangXiaoMing').click(function(){
+  $('.cashier-managecustomer').show().css("display","flex");
+  $('.cashier-addcustomer').hide();
+});
+// 開啟整單折扣
+$('.cashier-full-credit').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.popup-fullorder-panel').fadeIn(100);
+});
+// 開啟購物車結算頁
+$('.cashier-btn').click(function(){
+  $('#Page-checkout').show('slide', {direction: 'right'}, 500);
+});
+// 開啟顧客詳細資訊
+$('.cashier-managecustomer').click(function(){
+  $('#Page-customer-inform').show('slide', {direction: 'right'}, 500);
+});
+// 整頁slideout
+$('.page_back').click(function(){
+  $('#Page-customer-inform').hide('slide', {direction: 'right'}, 500);
+  $('#Page-checkout').hide('slide', {direction: 'right'}, 500);
+});
+  $(this)
+// 第一層返回
 $('.client_back').click(function(){
   $('#overlay').fadeOut(100);
   $(".popup-client-GP").fadeOut(100);
+  $(".popup-types-item").fadeOut(100);
 });
+// 第二層返回
 $('.client_back_second_level').click(function(){
   $(".popup-client-newcustomer").fadeOut(100);
 });
@@ -75,16 +108,24 @@ $('.onclick-btn').click(function(){
     $('.popup-client-GP').fadeOut(100);
     $('.shop-item-panel').fadeOut(100);
     $('.popup-category').fadeOut(100);
+    $('.popup-fullorder-panel').fadeOut(100);
     $('#overlay').fadeOut(100);
 });
 
+  $('.item-types').append(
+    $('<img/>')
+    .addClass("items-icon")
+    // 圖片位址
+    .attr('src',"image/shop-item-more.svg")
+    )
   // 关闭视窗
 $(document).mouseup(function(e)
   { 
-  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category');  
+  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item');  
   if(!pop.is(e.target) && pop.has(e.target).length === 0) { 
+    $('#overlay').removeClass('overlay-dark');
     $('#overlay').fadeOut(100);
-    $('.shop-car-GP,.shop-item-panel,.popup-client-GP').fadeOut(100);
+    $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item').fadeOut(100);
   }}
   );
   // $(document).mouseup(function(e)
@@ -169,8 +210,6 @@ $('.menu-grid-item.shop1').click(function(){
     screenfull.toggle();
   });
 
- 
- 
 
   $('.menu-grid-item.shop2').click(function(){
       // 更換POPUP名稱
@@ -379,6 +418,23 @@ $('.menu-grid-item.shop1').click(function(){
           $('.price-window').css('display', 'flex');
       }
       if($('#customize').prop("checked")){
+        console.log("現在是自訂");
+        $(".shop-item-penel-credit-window > *").hide();
+          $('.customize-window').css('display', 'flex');
+      }
+    })
+    $(".shop-item-penel-credit-labelGP").click(function(){
+      if($('#percentage-fullorder').prop("checked")){
+        console.log("現在是百分比");
+      $(".shop-item-penel-credit-window > *").hide();
+        $('.percentage-window').css('display', 'flex');
+      }
+      if($('#price-fullorder').prop("checked")){
+        console.log("現在是金額");
+        $(".shop-item-penel-credit-window > *").hide();
+          $('.price-window').css('display', 'flex');
+      }
+      if($('#customize-fullorder').prop("checked")){
         console.log("現在是自訂");
         $(".shop-item-penel-credit-window > *").hide();
           $('.customize-window').css('display', 'flex');

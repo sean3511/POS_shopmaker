@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="ipad-scene">
-        <div id="overlay" onselectstart="return false">
+        <div id="overlay">
             <div class="shop-item-panel">
                 <div class="shop-item-panel-title-gp">
                     <p class="subtitle1 shop-item-panel-title">餐點名稱</p>
@@ -42,31 +42,31 @@
                         <input type="radio" id="customize" name="credit-panel">
                         <label for="customize">自訂</label>
                     </div>
-                    <div class="shop-item-penel-credit-window">
-                        <div class="percentage-window">
-                            <div class="penel-list-mode-GP">
-                                <p class="subtitle2">折數名稱(選填)</p>
-                                <p class="body1 color-dark5">折扣</p>
-                            </div>
-                            <div class="penel-list-mode-GP">
-                                <p class="subtitle2">折扣</p>
-                                <p class="body1 color-dark5">75%</p>
-                            </div>
+                </div>
+                <div class="shop-item-penel-credit-window">
+                    <div class="percentage-window">
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折數名稱(選填)</p>
+                            <p class="body1 color-dark5">折扣</p>
                         </div>
-                        <div class="price-window">
-                            <div class="penel-list-mode-GP">
-                                <p class="subtitle2">折數名稱(選填)</p>
-                                <p class="body1 color-dark5">折扣</p>
-                            </div>
-                            <div class="penel-list-mode-GP">
-                                <p class="subtitle2">折扣</p>
-                                <p class="body1 color-dark5">$0</p>
-                            </div>
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折扣</p>
+                            <p class="body1 color-dark5">75%</p>
                         </div>
-                        <div class="customize-window">
-                            <p class="subtitle2">您尚未設置自訂的折扣<br>
-                                請先到後台建立折扣活動</p>
+                    </div>
+                    <div class="price-window">
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折數名稱(選填)</p>
+                            <p class="body1 color-dark5">折扣</p>
                         </div>
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折扣</p>
+                            <p class="body1 color-dark5">$0</p>
+                        </div>
+                    </div>
+                    <div class="customize-window">
+                        <p class="subtitle2">您尚未設置自訂的折扣<br>
+                            請先到後台建立折扣活動</p>
                     </div>
                 </div>
                 <div class="shop-item-penel-credit-btn-gp">
@@ -75,6 +75,7 @@
                     </button>
                 </div>
             </div>
+        
             <div class="shop-car-GP">
                 <img class="shop-car-shape" src="image/shop-car-shape.svg" alt="">
                 <div class="shop-car-list-GP">
@@ -105,9 +106,9 @@
                     </button>
                 </div>
                 <div class="client-inform-GP">
-                    <div class="client-inform-message">
-                    <p class="subtitle2">Annie</p>
-                    <p class="subtitle2">+886-091234567</p>
+                    <div class="client-inform-message client-WangXiaoMing">
+                    <p class="subtitle2">王小明(點選選擇會員)</p>
+                    <p class="subtitle2">+886-0912345678</p>
                     <p class="subtitle2">ggyygyg@gmail.com</p>
                     </div>
                 </div>
@@ -208,6 +209,280 @@
                     </button>
                 </div>
             </div>
+            <div class="popup-fullorder-panel">
+                <div class="popup-header">
+                    <p class="subtitle1 center-absolute">分類</p>
+                </div>
+                <div class="shop-item-penel-credit-gp">
+                    <p class="body2">折扣</p>
+                    <div class="shop-item-penel-credit-labelGP">
+                        <input type="radio" id="percentage-fullorder" name="credit-panel"checked>
+                        <label for="percentage-fullorder">百分比</label>
+
+                        <input type="radio" id="price-fullorder" name="credit-panel">
+                        <label for="price-fullorder">金額</label>
+
+                        <input type="radio" id="customize-fullorder" name="credit-panel">
+                        <label for="customize-fullorder">自訂</label>
+                    </div>
+                </div>
+                <div class="shop-item-penel-credit-window">
+                    <div class="percentage-window">
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折數名稱(選填)</p>
+                            <p class="body1 color-dark5">折扣</p>
+                        </div>
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折扣</p>
+                            <p class="body1 color-dark5">75%</p>
+                        </div>
+                    </div>
+                    <div class="price-window">
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折數名稱(選填)</p>
+                            <p class="body1 color-dark5">折扣</p>
+                        </div>
+                        <div class="penel-list-mode-GP padding-horizon">
+                            <p class="subtitle2">折扣</p>
+                            <p class="body1 color-dark5">$0</p>
+                        </div>
+                    </div>
+                    <div class="customize-window">
+                        <p class="subtitle2">您尚未設置自訂的折扣<br>
+                            請先到後台建立折扣活動</p>
+                    </div>
+                </div>
+                <div class="shop-item-penel-credit-btn-gp">
+                    <button  class="button_mid onclick-btn">
+                        <p class="subtitle2 color-white">完成</p>
+                    </button>
+                </div>
+            </div>
+            <div class="popup-types-item">
+                <div class="popup-client-title_GP">
+                    <img class="client_back" src="image/blue-cross.svg" alt="">
+                    <p class="subtitle1 center-absolute">商品規格</p>
+                </div>
+                <div class="type-card-gp">
+                    <div class="type-card-item">
+                        <img class="type-card-item-img" src="image/shop-item/stake.jpg" alt="">
+                        <p class="body2 type-card-item-font" >熟度:3分</p>
+                        <p class="body2 type-card-item-font">口味:蘑菇</p>
+                    </div>
+                    <div class="type-card-item">
+                        <img class="type-card-item-img" src="image/shop-item/stake.jpg" alt="">
+                        <p class="body2 type-card-item-font" >熟度:3分</p>
+                        <p class="body2 type-card-item-font">口味:蘑菇</p>
+                    </div>
+                    <div class="type-card-item">
+                        <img class="type-card-item-img" src="image/shop-item/stake.jpg" alt="">
+                        <p class="body2 type-card-item-font" >熟度:3分</p>
+                        <p class="body2 type-card-item-font">口味:蘑菇</p>
+                    </div>
+                    <div class="type-card-item">
+                        <img class="type-card-item-img" src="image/shop-item/stake.jpg" alt="">
+                        <p class="body2 type-card-item-font" >熟度:3分</p>
+                        <p class="body2 type-card-item-font">口味:蘑菇</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Page-checkout">
+            <div class="checkout-left-gp">
+                <div class="popup-client-title_GP display-flex-spacebetween">
+                    <img class="page_back" src="image/left-arrow-blue.svg" alt="">
+                </div>
+                <div class="checkout-shop-itemsGP">
+                    <div class="checkout-shop-item">
+                        <div class="cashier-shop-item-gp">
+                            <div class="cashier-shop-item-gp-left">
+                                <img class="cashier-shop-item-img" src="/image/shop-item/stake.jpg" alt="">
+                                <div class="cashier-shop-item-fontGP">
+                                    <p class="body1">丁骨牛排</p>
+                                    <p class="body2 color-dark5">庫存13</p>
+                                </div>
+                            </div>
+                            <div class="cashier-shop-item-gp-right">
+                                <div class="cashier-shop-price-group">
+                                    <p class="discount-original-price">$480</p>
+                                    <p class="body1">$430</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-shop-item">
+                        <div class="cashier-shop-item-gp">
+                            <div class="cashier-shop-item-gp-left">
+                                <img class="cashier-shop-item-img" src="/image/shop-item/stake.jpg" alt="">
+                                <div class="cashier-shop-item-fontGP">
+                                    <p class="body1">丁骨牛排</p>
+                                    <p class="body2 color-dark5">庫存13</p>
+                                </div>
+                            </div>
+                            <div class="cashier-shop-item-gp-right">
+                                <div class="cashier-shop-price-group">
+                                    <p class="discount-original-price">$480</p>
+                                    <p class="body1">$430</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-shop-item">
+                        <div class="cashier-shop-item-gp">
+                            <div class="cashier-shop-item-gp-left">
+                                <img class="cashier-shop-item-img" src="/image/shop-item/stake.jpg" alt="">
+                                <div class="cashier-shop-item-fontGP">
+                                    <p class="body1">丁骨牛排</p>
+                                    <p class="body2 color-dark5">庫存13</p>
+                                </div>
+                            </div>
+                            <div class="cashier-shop-item-gp-right">
+                                <div class="cashier-shop-price-group">
+                                    <p class="discount-original-price">$480</p>
+                                    <p class="body1">$430</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-total-gp">
+                    <div class="cashier-total">
+                        <p class="body1">小計</p>
+                        <p class="title2"> $3,360</p>
+                    </div>
+                    <div class="activity-total">
+                        <p class="body1">六月活動</p>
+                        <p class="title2">-$1,680</p>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-right-gp"></div>
+        </div>
+        <div id="Page-customer-inform">
+            <div class="popup-client-title_GP display-flex-spacebetween">
+                <img class="page_back" src="image/left-arrow-blue.svg" alt="">
+                <p class="subtitle1 center-absolute">顧客資訊</p>
+                <p class="subtitle1 primary-color">編輯</p>
+            </div>
+            <div class="customer-inform-top-group">
+                <div class="btn-addCustomerto-cashier">
+                    <img src="/image/add-customer-shop-car.svg" alt="">
+                    <p class="subtitle1 color-white">新增購物</p>
+                </div>
+                <div class="customer-inform-deta-gp">
+                    <div class="customer-inform-deta-small-gp">
+                        <p class="subtitle1">訂單數</p>
+                        <p class="body1">1</p>
+                    </div>
+                    <div class="customer-inform-bar"></div>
+                    <div class="customer-inform-deta-small-gp">
+                        <p class="subtitle1">累積消費</p>
+                        <p class="body1">$210</p>
+                    </div>
+                </div>
+            </div>
+            <div class="customer-inform-list-gp">
+                <div class="customer-inform-list-small-gp">
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">姓名</p>
+                        <p class="body1">王大明</p>
+                    </div>
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">手機</p>
+                        <p class="body1">+886-0912345678</p>
+                    </div>
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">性別</p>
+                        <p class="body1">-</p>
+                    </div>
+                </div>
+                <div class="customer-inform-list-small-gp">
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">生日</p>
+                        <p class="body1">-</p>
+                    </div>
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">地址</p>
+                        <p class="body1">-</p>
+                    </div>
+                    <div class="customer-inform-font-gp">
+                        <p class="body1">郵件</p>
+                        <p class="body1">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="customer-inform-list-gp">
+                    <div class="customer-inform-label-gp">
+                        <img src="image/fluent_add-circle-16-filled.svg" alt="">
+                        <p class="subtitle2 primary-color">備註</p>
+                    </div>
+                    <div class="customer-inform-label-gp">
+                        <img class="primary-lighter-color" src="image/fluent_add-circle-16-filled-lighter.svg" alt="">
+                        <p class="subtitle2 primary-lighter-color">標籤</p>
+                    </div>
+            </div>
+            <div class="customer-order-history-gp">
+                <div class="customer-order-history-title-gp">
+                    <p class="title2">顧客交易紀錄</p>
+                </div>
+            </div>
+            <div class="customer-shop-history-item">
+                <div class="padding16-wrapper display-flex-spacebetween">
+                    <div class="customer-shop-history-order-inform-gp">
+                        <p class="subtitle2">06-12 12:02 下午</p>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/money_glad.svg" alt="">
+                            <p class="body1 color-dark5">3049985059186364791</p>
+                        </div>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/cellphone_glad.svg" alt="">
+                            <p class="body1 color-dark5">0912345678</p>
+                        </div>
+                        <p class="title1 center-absolute customer-shop-history-money" style="width: 260px;">$480</p>
+                    </div>
+                    <div class="history-label">
+                        <p class="subtitle2 color-white">已付款/已完成</p>
+                    </div>            
+                </div>
+            </div>
+            <div class="customer-shop-history-item">
+                <div class="padding16-wrapper display-flex-spacebetween">
+                    <div class="customer-shop-history-order-inform-gp">
+                        <p class="subtitle2">06-12 12:02 下午</p>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/money_glad.svg" alt="">
+                            <p class="body1 color-dark5">3049985059186364791</p>
+                        </div>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/cellphone_glad.svg" alt="">
+                            <p class="body1 color-dark5">0912345678</p>
+                        </div>
+                        <p class="title1 center-absolute customer-shop-history-money" style="width: 260px;">$480</p>
+                    </div>
+                    <div class="history-label">
+                        <p class="subtitle2 color-white">已付款/已完成</p>
+                    </div>            
+                </div>
+            </div>
+            <div class="customer-shop-history-item">
+                <div class="padding16-wrapper display-flex-spacebetween">
+                    <div class="customer-shop-history-order-inform-gp">
+                        <p class="subtitle2">06-12 12:02 下午</p>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/money_glad.svg" alt="">
+                            <p class="body1 color-dark5">3049985059186364791</p>
+                        </div>
+                        <div class="customer-shop-history-icon-gp">
+                            <img src="image/cellphone_glad.svg" alt="">
+                            <p class="body1 color-dark5">0912345678</p>
+                        </div>
+                        <p class="title1 center-absolute customer-shop-history-money" style="width: 260px;">$480</p>
+                    </div>
+                    <div class="history-label">
+                        <p class="subtitle2 color-white">已付款/已完成</p>
+                    </div>            
+                </div>
+            </div>
         </div>
         <div id="Page-cashier">
             <div class="menu">
@@ -239,11 +514,11 @@
                 </div>
                 <div class="flex-grow-max">
                     <div class="menu-item-frame ">
-                        <div class="menu-grid-item shop1">
+                        <div class="menu-grid-item shop1 item-types">
                             <img class="menu-gird-item-img" src="image/shop-item/stake.jpg" alt="">
                             <p class="body2 ">丁骨牛排</p>
                         </div>
-                        <div class="menu-grid-item shop2">
+                        <div class="menu-grid-item shop2 ">
                             <img class="menu-gird-item-img" src="image/shop-item/salmon.jpg" alt="">
                             <p class="body2 ">主廚鮭魚</p>
                         </div>
@@ -324,6 +599,13 @@
                         <div class="cashier-addcustomer">
                             <img src="image/add-customer.svg" alt="">
                             <p class="subtitle2 ">新增客戶</p>
+                        </div>
+                        <div class="cashier-managecustomer">
+                            <div class="customer-inform-group">
+                                <p class="subtitle2 font-botline primary-color">王小明</p>
+                                <p class="subtitle2 ">0912345678</p>
+                            </div>
+                            <img src="image/add-customer.svg" alt="">
                         </div>
                         <div class="cashier-shop-itemsGP">
                             <!-- <div class="cashier-shop-item">
@@ -413,6 +695,7 @@
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.1.0/screenfull.min.js" integrity="sha512-SGPHIoS+NsP1NUL5RohNpDs44JlF36tXLN6H3Cw+EUyenEc5zPXWqfw9D+xmvR00QYUYewQIJQ6P5yH82Vw6Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="javascript.js"></script>
 </body>
