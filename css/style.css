@@ -741,6 +741,7 @@ button{
     flex-direction: column;
     justify-content: space-between;
     /* background-color: antiquewhite; */
+    /* overflow: auto; */
 }
 .search-bar{
     padding: 16px;
@@ -823,6 +824,7 @@ button{
 .cashier-list{
     display: flex;
     flex-direction: column;
+    flex: 1 1 0;
 }
 .cashier-addcustomer{
     box-sizing: border-box;
@@ -856,6 +858,7 @@ button{
     padding-bottom: 0;
     max-height: 356px;
     overflow: auto;
+    flex: 1 1 0;
 }
 .cashier-shop-itemsGP::-webkit-scrollbar {
     display: none;
