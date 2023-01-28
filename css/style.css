@@ -25,6 +25,9 @@ body{
     display: none;
     /* overflow: hidden; */
 }
+#Page-checkout[style*='display: block']{
+    display: flex !important;
+}
 #Page-customer-inform{
     position: absolute;
     width: 1194px;
@@ -52,6 +55,7 @@ body{
     width: 475px;
     height: 100%;
 }
+
 .checkout-right-gp{
     box-sizing: border-box;
     height: 100%;

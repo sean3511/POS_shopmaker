@@ -90,7 +90,7 @@ $('.btn-checkout-add-member').click(function(){
 });
 // 開啟購物車結算頁
 $('.cashier-btn').click(function(){
-  $('#Page-checkout').show('slide', {direction: 'right'}, 500);
+  $('#Page-checkout').show('slide', {direction: 'right'}, 500).css("display","flex");
 });
 // 開啟顧客詳細資訊
 $('.cashier-managecustomer').click(function(){
