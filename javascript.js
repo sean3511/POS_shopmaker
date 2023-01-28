@@ -36,6 +36,9 @@
     shop4_amount = 0;
     console.log("D商品4"+ shop4_amount);
   });
+ 
+
+// 結算結帳頁面總金額#
 
  // 商品界面开启
  $('body:not(.cashier-shop-item-gp-right').on('click', '.cashier-shop-item', function(){
@@ -79,6 +82,12 @@ $('.cashier-full-credit').click(function(){
   $('#overlay').fadeIn(100);
   $('.popup-fullorder-panel').fadeIn(100);
 });
+// 開啟選擇員工結帳
+$('.btn-checkout-add-member').click(function(){
+  $('#overlay').addClass('overlay-dark');
+  $('#overlay').fadeIn(100);
+  $('.popup-checkout-choose-member').fadeIn(100);
+});
 // 開啟購物車結算頁
 $('.cashier-btn').click(function(){
   $('#Page-checkout').show('slide', {direction: 'right'}, 500);
@@ -92,12 +101,18 @@ $('.page_back').click(function(){
   $('#Page-customer-inform').hide('slide', {direction: 'right'}, 500);
   $('#Page-checkout').hide('slide', {direction: 'right'}, 500);
 });
+// 結帳畫面返回選擇結帳方式頁面
+$('.checkout-return').click(function(){
+  $('.checkout-right-panel-gp').show();
+  $('.checkout-payment-gp').hide();
+});
   $(this)
 // 第一層返回
 $('.client_back').click(function(){
   $('#overlay').fadeOut(100);
   $(".popup-client-GP").fadeOut(100);
-  $(".popup-types-item").fadeOut(100);
+  $(".popup-client-GP").fadeOut(100);
+  $(".popup-checkout-choose-member").fadeOut(100);
 });
 // 第二層返回
 $('.client_back_second_level').click(function(){
@@ -109,6 +124,7 @@ $('.onclick-btn').click(function(){
     $('.shop-item-panel').fadeOut(100);
     $('.popup-category').fadeOut(100);
     $('.popup-fullorder-panel').fadeOut(100);
+    $('.popup-tex-error').fadeOut(100);
     $('#overlay').fadeOut(100);
 });
 
@@ -121,11 +137,11 @@ $('.onclick-btn').click(function(){
   // 关闭视窗
 $(document).mouseup(function(e)
   { 
-  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item');  
+  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member');  
   if(!pop.is(e.target) && pop.has(e.target).length === 0) { 
     $('#overlay').removeClass('overlay-dark');
     $('#overlay').fadeOut(100);
-    $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item').fadeOut(100);
+    $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member').fadeOut(100);
   }}
   );
   // $(document).mouseup(function(e)
@@ -209,7 +225,62 @@ $('.menu-grid-item.shop1').click(function(){
   $(".btn-full-screen").click(function(){
     screenfull.toggle();
   });
+  // 寬度自適應input texy
+  $(function () {
+    var fun = function() {//input如何根据文本自适应宽度
+        var $this = $(this);
+        var length = $this.val().length;//获取当前文本框的长度
+        var width = parseInt(length) *12;
+        $this.css("width",width+"px");
+    };
+    $('#tax-ID-num,.rwd-text').bind('input propertychange', fun); //propertychange属性改变事件
+});
 
+// 點選信用卡欄時觸發inputtext
+$('.checkout-payblock-creditcard').click(function(){
+  // alert("幹幹幹");
+  $('#checkout-credit-card-amount').hover();
+})
+
+var val = $('.checkout-money-title').html();
+val = val.replace(/[^\d]/g,'');
+var sumvalue;
+  //輸入值時做總數加減
+$(".checkout-payment-num").bind("input propertychange",function(event)
+{   
+  sumvalue = val - Number($('#checkout-credit-card-amount').val())
+    $('.check-out-payment-sum').text(
+      sumvalue*-1
+      +" $"
+      )
+  if(sumvalue<=0){
+    $(".money-state-font").html('找零');
+    $(".money-state-font").addClass('primary-color');
+    $(".check-out-payment-sum").addClass('primary-color');
+    $(".money-state-font").removeClass("color-error");
+    $(".check-out-payment-sum").removeClass("color-error");
+  }
+  else{
+    $(".money-state-font").html('不足差額');
+    $(".money-state-font").addClass('color-error');
+    $(".check-out-payment-sum").addClass('color-error');
+    $(".money-state-font").removeClass("primary-color");
+    $(".check-out-payment-sum").removeClass("primary-color");
+  }
+});
+// 判定字體顏色
+
+$('.checkout-payment-item').click(function(){
+if( $('#tax-ID-num').val().length!=8){
+  $('#overlay').addClass('overlay-dark');
+  $('#overlay').fadeIn(100);
+  $('.popup-tex-error').fadeIn(100);
+}
+else{
+  $('.checkout-payment-gp').show();
+  $('.checkout-right-panel-gp').hide();
+}
+  });
 
   $('.menu-grid-item.shop2').click(function(){
       // 更換POPUP名稱
