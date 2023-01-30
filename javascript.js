@@ -38,7 +38,12 @@
   });
  
 
-// 結算結帳頁面總金額#
+//移除付款方式
+//新增付款方式
+$('.payway-add').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.popup-choose-checkoutway').fadeIn(100);
+});
 
  // 商品界面开启
  $('body:not(.cashier-shop-item-gp-right').on('click', '.cashier-shop-item', function(){
@@ -137,11 +142,11 @@ $('.onclick-btn').click(function(){
   // 关闭视窗
 $(document).mouseup(function(e)
   { 
-  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member');  
+  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member,.popup-choose-checkoutway');  
   if(!pop.is(e.target) && pop.has(e.target).length === 0) { 
     $('#overlay').removeClass('overlay-dark');
     $('#overlay').fadeOut(100);
-    $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member').fadeOut(100);
+    $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member,.popup-choose-checkoutway').fadeOut(100);
   }}
   );
   // $(document).mouseup(function(e)
