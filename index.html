@@ -106,7 +106,7 @@
                     </button>
                 </div>
                 <div class="client-inform-GP">
-                    <div class="client-inform-message client-WangXiaoMing">
+                    <div class="client-inform-message client-WangXiaoMing onclick-btn">
                     <p class="subtitle2">王小明(點選選擇會員)</p>
                     <p class="subtitle2">+886-0912345678</p>
                     <p class="subtitle2">ggyygyg@gmail.com</p>
@@ -211,7 +211,7 @@
             </div>
             <div class="popup-fullorder-panel">
                 <div class="popup-header">
-                    <p class="subtitle1 center-absolute">分類</p>
+                    <p class="subtitle1 center-absolute">整單折扣</p>
                 </div>
                 <div class="shop-item-penel-credit-gp">
                     <p class="body2">折扣</p>
@@ -355,7 +355,9 @@
             </div>
             <div class="popup-choose-checkoutway">
                 <div class="popup-checkoutway-gp">
-                    <button class="chekout-choose-shopway subtitle1">購物車</button>
+                    <button class="chekout-choose-shopway subtitle1">現金</button>
+                    <button class="chekout-choose-shopway subtitle1">信用卡</button>
+                    <button class="chekout-choose-shopway subtitle1">其他</button>
                 </div>
                 <img src="image/popup-right-triango.svg" alt="">
             </div>
@@ -427,6 +429,10 @@
                         <p class="body1">六月活動</p>
                         <p class="title2">-$1,680</p>
                     </div>
+                    <div class="activity-total">
+                        <p class="body1">整單折扣</p>
+                        <p class="title2">-$1,680</p>
+                    </div>
                 </div>
             </div>
             <div class="checkout-right-gp">
@@ -479,12 +485,34 @@
                         </div>
                     </div>
                     <div class="checkout-moeny-payway-gp">
-                        <div class="checkout-money-payway payway-creditcard">
+                        <div class="payway-cash checkout-money-payway">
+                            <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
+                            <div class="checkout-payway-gp checkout-payblock-cash">
+                                <div class="checkout-payway-small-gp">
+                                    <img src="image/checkout-cash.svg" alt="" style="height: 48px; width: 48px;">
+                                    <p class="subtitle1">現金</p>
+                                </div>
+                                <input class="rwd-text body1 checkout-payment-num" type="text" id="checkout-credit-card-amount" name="checkout-credit-card-amount" placeholder="">
+                                <label class="checkblock" for="checkout-credit-card-amount"></label> 
+                            </div>
+                        </div>
+                        <div class="payway-creditcard checkout-money-payway">
                             <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
                             <div class="checkout-payway-gp checkout-payblock-creditcard">
                                 <div class="checkout-payway-small-gp">
-                                    <img src="image/checkout-card.svg" alt="">
+                                    <img src="image/checkout-card.svg" alt="" style="height: 48px; width: 48px;">
                                     <p class="subtitle1">信用卡</p>
+                                </div>
+                                <input class="rwd-text body1 checkout-payment-num" type="text" id="checkout-credit-card-amount" name="checkout-credit-card-amount" placeholder="">
+                                <label class="checkblock" for="checkout-credit-card-amount"></label> 
+                            </div>
+                        </div>
+                        <div class="payway-another checkout-money-payway">
+                            <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
+                            <div class="checkout-payway-gp checkout-another">
+                                <div class="checkout-payway-small-gp">
+                                    <img src="image/checkout-another.svg" alt="" style="height: 48px; width: 48px;">
+                                    <p class="subtitle1">其他</p>
                                 </div>
                                 <input class="rwd-text body1 checkout-payment-num" type="text" id="checkout-credit-card-amount" name="checkout-credit-card-amount" placeholder="">
                                 <label class="checkblock" for="checkout-credit-card-amount"></label> 
@@ -540,7 +568,8 @@
                         <p class="subtitle1">訂單數</p>
                         <p class="body1">1</p>
                     </div>
-                    <div class="customer-inform-bar"></div>
+                </div>
+                <div class="customer-inform-deta-gp">
                     <div class="customer-inform-deta-small-gp">
                         <p class="subtitle1">累積消費</p>
                         <p class="body1">$210</p>
@@ -771,7 +800,7 @@
                                 <p class="subtitle2 font-botline primary-color">王小明</p>
                                 <p class="subtitle2 ">0912345678</p>
                             </div>
-                            <img src="image/add-customer.svg" alt="">
+                            <img class="customer-change-member" src="image/add-customer.svg" alt="">
                         </div>
                         <div class="cashier-shop-itemsGP">
                             <!-- <div class="cashier-shop-item">

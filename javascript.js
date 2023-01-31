@@ -57,6 +57,11 @@ $('.menu-header-allitem').click(function(){
   $('#overlay').fadeIn(100);
   $('.shop-car-GP').css("display", "flex").fadeIn(100);
 });
+// 關閉購物車 onclick-btn
+$('.shop-car-list-GP .onclick-btn').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.shop-car-GP').css("display", "flex").fadeIn(100);
+});
 // 開啟會員新增
 $('.btn-add-customer').click(function(){
   $('.popup-client-newcustomer').fadeIn(100);
@@ -68,12 +73,12 @@ $('.item-types').click(function(){
   $('.popup-types-item').fadeIn(100);
 });
 //開啟分類
-$('.btn-category').click(function(){
+$('.menu-header-allitem-left').click(function(){
   $('#overlay').fadeIn(100);
   $('.popup-category').fadeIn(100);
 });
 //開啟新增会员视窗
-$('.cashier-addcustomer').click(function(){
+$('.cashier-addcustomer,.customer-change-member').click(function(){
   $('#overlay').fadeIn(100);
   $('.popup-client-GP').fadeIn(100);
 });
@@ -98,7 +103,7 @@ $('.cashier-btn').click(function(){
   $('#Page-checkout').show('slide', {direction: 'right'}, 500).css("display","flex");
 });
 // 開啟顧客詳細資訊
-$('.cashier-managecustomer').click(function(){
+$('.customer-inform-group').click(function(){
   $('#Page-customer-inform').show('slide', {direction: 'right'}, 500);
 });
 // 整頁slideout
@@ -130,6 +135,7 @@ $('.onclick-btn').click(function(){
     $('.popup-category').fadeOut(100);
     $('.popup-fullorder-panel').fadeOut(100);
     $('.popup-tex-error').fadeOut(100);
+    $('.shop-car-GP').fadeOut(100);
     $('#overlay').fadeOut(100);
 });
 
@@ -547,7 +553,7 @@ else{
               $('<label>').prop({
                 for: 'shop-car'+shop_car_amount
               }).html('購物車'+shop_car_amount)
-              .addClass('Shop-car-label subtitle1')
+              .addClass('Shop-car-label subtitle1 onclick-btn')
               .addClass('car'+shop_car_amount)
             )
       }
@@ -563,7 +569,7 @@ else{
             $('<label>').prop({
               for: 'shop-car'+shop_car_amount
             }).html('購物車'+shop_car_amount)
-            .addClass('Shop-car-label subtitle1')
+            .addClass('Shop-car-label subtitle1 onclick-btn')
             .addClass('car'+shop_car_amount)
           )
       

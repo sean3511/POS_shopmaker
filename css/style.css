@@ -10,8 +10,9 @@ body{
 }
 #Page-cashier{
     width: 1194px;
-    height: 834px;
-    background-color: aqua;
+    /* height: 834px; */
+    background-color: #FFFFFF;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -64,7 +65,7 @@ body{
     height: 100%;
     flex: 1 1 0;
     background: #FAFAFC;
-    padding: 48px;
+    padding: 24px;
 }
 .checkout-announce-btn-gp{
     display: flex;
@@ -128,7 +129,7 @@ input[type=radio] { display: none }
     justify-content: space-between;
     height: 112px;
     align-items: center;
-    border-bottom: 1px solid #E2E2E2;
+    /* border-bottom: 1px solid #E2E2E2; */
 }
 .customer-shop-history-order-inform-gp{
     display: flex;
@@ -313,6 +314,11 @@ height: 18px;
     gap: 8px;
     padding: 24px;
 }
+.textbox-GP{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .client-button-GP{
     display: flex;
     padding: 0 24px 24px;
@@ -388,7 +394,7 @@ height: 18px;
     position: relative;
     display: flex;
     height: 56px;
-    border-bottom: 1px solid #E2E2E2;
+    /* border-bottom: 1px solid #E2E2E2; */
     padding: 16px;
     box-sizing: border-box;
 }
@@ -539,7 +545,7 @@ height: 18px;
     position: absolute;
     width: 576px;
     height: 558px;
-    left: 309px;
+    left: 70px;
     top: 138px;
 
     /* light/light01 */
@@ -579,7 +585,7 @@ height: 18px;
     padding:16px;
     gap: 10px;
     width: 288px;
-    height: 148px;
+    /* height: 148px; */
 }
 .shop-item-penel-credit-btn-gp{
     display: flex;
@@ -870,7 +876,7 @@ button{
 }
 .payment{
     width: 475px;
-    height: 100%;
+    max-height: 100vh;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -1107,7 +1113,7 @@ button{
     position: relative;
     display: flex;
     flex: 1 1 0;
-    padding: 24px;
+    padding: 16px;
     background: #FFFFFF;
     /* light/light5 */
 
@@ -1115,7 +1121,7 @@ button{
     border-radius: 8px;
     justify-content: space-between;
     align-items: center;
-    height: 108px;
+    height: 80px;
     box-sizing: border-box;
 }
 .checkout-payway-small-gp{
@@ -1140,6 +1146,12 @@ button{
     align-items: center;
     gap: 10px;
 }
+/* .payway-creditcard{
+    display: none;
+}
+.payway-another{
+    display: none;
+} */
 .checkout-announce-gp{
     margin-top: 24px;
     display: flex;
@@ -1197,11 +1209,12 @@ button{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 100%;
     /* display: none; */
 }
 .checkout-payment-gp{
     background: #FFFFFF;
-    height: 738px;
+    /* height: 738px; */
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
     border-radius: 16px;
     box-sizing: border-box;
