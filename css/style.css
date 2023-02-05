@@ -51,6 +51,37 @@ body{
     /* user-select: none; */
     transition: all 0.3s;
 }
+.ham-list-panel{
+    position: absolute;
+    height: 100%;
+    width: 305px;
+    background-color: #1E1E2D;
+    display: none;
+}
+.ham-store-gp{
+    display: flex;
+    padding: 24px;
+    height: 72px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+.ham-label-gp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ham-store-round-shape{
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;  
+    background-color: #009EF7;;
+}
+.ham-store-chosen-gp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .overlay-dark{
     transition: all 0.3s;
     background: rgba(127, 127, 127, 0.25);
@@ -141,6 +172,9 @@ input[type=radio] { display: none }
     gap:6px;
     align-items: center;
 }
+.payway-add{
+    position: relative;
+}
 .customer-inform-list-gp{
     display: flex;
     padding: 0px 16px;
@@ -201,6 +235,16 @@ input[type=radio] { display: none }
     width: 100%;
     height: 40px;
     border-bottom: 1px solid #E2E2E2;
+}
+.ham-label-gp label{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px;
+}
+.ham-label-gp input[type="radio"]:checked+label{
+    background: rgba(255, 255, 255, 0.25);
+    border-left: #009EF7 10px solid;
 }
 
 .shop-car-list-GP input[type="radio"]:checked+label { 
@@ -563,16 +607,16 @@ height: 18px;
     width: 100%;
     height: 40px;
     border-bottom: 1px solid #E2E2E2;
+    /* display: none; */
 }
-.chekout-choose-shopway:last-child{
-    border-bottom:none
+.chekout-choose-shopway[style='display: block']:last-child{
+    border-bottom:none !important;
 }
 .popup-choose-checkoutway{
     display: flex;
     position: absolute;
-    left: 235px;
-    top: 325px;
     align-items: center;
+    left: -310px;
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.2));
     display: none;
 }
@@ -1141,6 +1185,7 @@ button{
     padding: 16px 0px;
 }
 .checkout-money-payway{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1327,4 +1372,7 @@ button{
     justify-content: space-between;
     padding: 0px 16px;
     align-items: center;
+}
+.pay-type{
+    display: none;
 }

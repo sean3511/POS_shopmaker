@@ -3,6 +3,9 @@
  var shop2_amount = 0;
  var shop3_amount = 0;
  var shop4_amount = 0;
+ var payway_counter = 0;
+
+
 
  $(document).ready(function(){
 
@@ -36,13 +39,108 @@
     shop4_amount = 0;
     console.log("D商品4"+ shop4_amount);
   });
- 
-
 //移除付款方式
+$('.checkout-remove-way').click(function(){
+  payway_counter--;
+  var checkoutway_amount = $('.checkout-moeny-payway-gp').find(".pay-type:visible").length
+  // alert("數量"+checkoutway_amount);
+  if( checkoutway_amount > 1){
+    $(this).parent(".checkout-money-payway").hide();
+  }
+  if( checkoutway_amount <= 1){
+  $(".checkout-right-panel-gp").show();
+  $(".checkout-payment-gp").hide();
+  // pay-type
+  $('.pay-type').hide();
+  }
+  else
+  {
+    $(".checkoyt-add-gp-root").show();
+  }
+  if( $('.payway-cash').is(":hidden")){
+    $('.checkout-input-cash-popup').show();
+  }
+  if( $('.payway-creditcard').is(":hidden")){
+    $('.checkout-input-creditcard-popup').show();
+  }
+  if( $('.payway-another').is(":hidden")){
+    $('.checkout-input-another-popup').show();
+  }
+});
+// 監聽元素狀態
+
+// 在選擇付款方式頁面打開結帳頁支付渠道 pay-type
+$('.checkout-input-cash,.checkout-input-cash-popup').click(function(){
+  payway_counter++
+  if( payway_counter  === 3){
+    $(".checkoyt-add-gp-root").hide();
+  }
+  else
+  {
+    $(".checkoyt-add-gp-root").show();
+  }
+  $('.checkout-input-cash-popup').hide();
+  $('.popup-choose-checkoutway').hide();
+  $('.payway-cash').css("display", "flex").fadeIn(100)
+  
+});
+$('.checkout-input-creditcard,.checkout-input-creditcard-popup').click(function(){
+  payway_counter++
+  if( payway_counter  === 3){
+    $(".checkoyt-add-gp-root").hide();
+  }
+  else
+  {
+    $(".checkoyt-add-gp-root").show();
+  }
+  $('.checkout-input-creditcard-popup').hide();
+  $('.popup-choose-checkoutway').hide();
+  $('.payway-creditcard').css("display", "flex").fadeIn(100)
+});
+$('.checkout-input-another,.checkout-input-another-popup').click(function(){
+  payway_counter++
+  if( payway_counter  === 3){
+    $(".checkoyt-add-gp-root").hide();
+  }
+  else
+  {
+    $(".checkoyt-add-gp-root").show();
+  }
+  $('.checkout-input-another-popup').hide();
+  $('.popup-choose-checkoutway').hide();
+  $('.payway-another').css("display", "flex").fadeIn(100)
+});
+
 //新增付款方式
 $('.payway-add').click(function(){
-  $('#overlay').fadeIn(100);
+  if( payway_counter  === 3){
+    $(".checkoyt-add-gp-root").hide();
+  }
+  else
+  {
+    $(".checkoyt-add-gp-root").show();
+  }
   $('.popup-choose-checkoutway').fadeIn(100);
+  $('.popup-checkoutway-gp').find(".chekout-choose-shopway:visible").last().css("border-bottom",'none');
+  // 判定是否有新增渠道來決定popup按鈕開關
+  if( $('.payway-cash').is(":visible")){
+    $('.checkout-input-cash-popup').hide();
+  }
+  else{
+    $('.checkout-input-cash-popup').show();
+  }
+  if( $('.payway-creditcard').is(":visible")){
+    $('.checkout-input-creditcard-popup').hide();
+  }
+  else{
+    $('.checkout-input-creditcard-popup').show();
+  }
+  if( $('.payway-another').is(":visible")){
+    $('.checkout-input-another-popup').hide();
+  }
+  else{
+    $('.checkout-input-another-popup').show();
+  }
 });
 
  // 商品界面开启
@@ -106,6 +204,15 @@ $('.cashier-btn').click(function(){
 $('.customer-inform-group').click(function(){
   $('#Page-customer-inform').show('slide', {direction: 'right'}, 500);
 });
+// 開啟ham
+$('.btn-ham').click(function(){
+  $('#overlay').fadeIn(100);
+  $('.ham-list-panel').show('slide', {direction: 'left'}, 500);
+});
+$('.btn-ham-return').click(function(){
+  $('#overlay').fadeOut(500);
+  $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
+});
 // 整頁slideout
 $('.page_back').click(function(){
   $('#Page-customer-inform').hide('slide', {direction: 'right'}, 500);
@@ -113,8 +220,10 @@ $('.page_back').click(function(){
 });
 // 結帳畫面返回選擇結帳方式頁面
 $('.checkout-return').click(function(){
+  payway_counter = 0;
   $('.checkout-right-panel-gp').show();
   $('.checkout-payment-gp').hide();
+  $('.pay-type').hide();
 });
   $(this)
 // 第一層返回
@@ -148,10 +257,11 @@ $('.onclick-btn').click(function(){
   // 关闭视窗
 $(document).mouseup(function(e)
   { 
-  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member,.popup-choose-checkoutway');  
+  var pop = $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-client-newcustomer,.add-shop-car,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member,.popup-choose-checkoutway,.ham-list-panel');  
   if(!pop.is(e.target) && pop.has(e.target).length === 0) { 
     $('#overlay').removeClass('overlay-dark');
-    $('#overlay').fadeOut(100);
+    $('#overlay').fadeOut(500);
+    $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
     $('.shop-car-GP,.shop-item-panel,.popup-client-GP,.popup-category,.popup-fullorder-panel,.popup-types-item,.popup-tex-error,.popup-checkout-choose-member,.popup-choose-checkoutway').fadeOut(100);
   }}
   );
@@ -283,6 +393,7 @@ $(".checkout-payment-num").bind("input propertychange",function(event)
 
 $('.checkout-payment-item').click(function(){
 if( $('#tax-ID-num').val().length!=8){
+  payway_counter=0
   $('#overlay').addClass('overlay-dark');
   $('#overlay').fadeIn(100);
   $('.popup-tex-error').fadeIn(100);

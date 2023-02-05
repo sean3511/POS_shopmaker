@@ -13,6 +13,43 @@
 <body>
     <div id="ipad-scene">
         <div id="overlay">
+            <div class="ham-list-panel">
+                <div class="ham-store-gp">
+                    <div class="ham-store-chosen-gp">
+                        <div class="ham-store-round-shape"></div>
+                        <p class="title2 color-white">台中車站店</p>
+                    </div>
+                    <img class="btn-ham-return" src="image/ham-store-arrow-right.svg" alt="" style="height: 20px;">
+                </div>
+                <div class="ham-label-gp">
+                    <input type="radio" id="ham-dashboard" name="ham-panel"checked>
+                    <label for="ham-dashboard">Dashboard</label>
+
+                    <input type="radio" id="ham-checkout" name="ham-panel">
+                    <label for="ham-checkout">收銀台</label>
+
+                    <input type="radio" id="ham-order-history" name="ham-panel">
+                    <label for="ham-order-history">訂單紀錄</label>
+
+                    <input type="radio" id="ham-client" name="ham-panel">
+                    <label for="ham-client">員工</label>
+
+                    <input type="radio" id="ham-check-cargo" name="ham-panel">
+                    <label for="ham-check-cargo">進貨</label>
+
+                    <input type="radio" id="ham-check-storage" name="ham-panel">
+                    <label for="ham-check-storage">盤點</label>
+
+                    <input type="radio" id="ham-check-customer" name="ham-panel">
+                    <label for="ham-check-customer">顧客</label>
+
+                    <input type="radio" id="ham-change-work" name="ham-panel">
+                    <label for="ham-change-work">交班</label>
+
+                    <input type="radio" id="ham-setting" name="ham-panel">
+                    <label for="ham-setting">設定</label>
+                </div>
+            </div>
             <div class="shop-item-panel">
                 <div class="shop-item-panel-title-gp">
                     <p class="subtitle1 shop-item-panel-title">餐點名稱</p>
@@ -353,14 +390,6 @@
                     </div>
                 </div>
             </div>
-            <div class="popup-choose-checkoutway">
-                <div class="popup-checkoutway-gp">
-                    <button class="chekout-choose-shopway subtitle1">現金</button>
-                    <button class="chekout-choose-shopway subtitle1">信用卡</button>
-                    <button class="chekout-choose-shopway subtitle1">其他</button>
-                </div>
-                <img src="image/popup-right-triango.svg" alt="">
-            </div>
         </div>
         <div id="Page-checkout">
             <div class="checkout-left-gp">
@@ -462,15 +491,15 @@
                         </div>
                     </div>
                     <div class="checkout-payment-grid-gp">
-                        <div class="checkout-payment-item">
+                        <div class="checkout-payment-item checkout-input-cash">
                             <img src="image/checkout-cash.svg" alt="">
                             <p class="subtitle1">現金</p>
                         </div>
-                        <div class="checkout-payment-item">
+                        <div class="checkout-payment-item checkout-input-creditcard">
                             <img src="image/checkout-card.svg" alt="">
                             <p class="subtitle1">信用卡</p>
                         </div>
-                        <div class="checkout-payment-item">
+                        <div class="checkout-payment-item checkout-input-another">
                             <img src="image/checkout-another.svg" alt="">
                             <p class="subtitle1">其他</p>
                         </div>
@@ -485,7 +514,7 @@
                         </div>
                     </div>
                     <div class="checkout-moeny-payway-gp">
-                        <div class="payway-cash checkout-money-payway">
+                        <div class="payway-cash checkout-money-payway pay-type">
                             <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
                             <div class="checkout-payway-gp checkout-payblock-cash">
                                 <div class="checkout-payway-small-gp">
@@ -496,7 +525,7 @@
                                 <label class="checkblock" for="checkout-credit-card-amount"></label> 
                             </div>
                         </div>
-                        <div class="payway-creditcard checkout-money-payway">
+                        <div class="payway-creditcard checkout-money-payway pay-type">
                             <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
                             <div class="checkout-payway-gp checkout-payblock-creditcard">
                                 <div class="checkout-payway-small-gp">
@@ -507,7 +536,7 @@
                                 <label class="checkblock" for="checkout-credit-card-amount"></label> 
                             </div>
                         </div>
-                        <div class="payway-another checkout-money-payway">
+                        <div class="payway-another checkout-money-payway pay-type">
                             <img class="checkout-remove-way" src="image/payway-minus.svg" alt="">
                             <div class="checkout-payway-gp checkout-another">
                                 <div class="checkout-payway-small-gp">
@@ -518,12 +547,20 @@
                                 <label class="checkblock" for="checkout-credit-card-amount"></label> 
                             </div>
                         </div>
-                        <div class="checkout-money-payway payway-add">
-                            <img  src="image/payway-add.svg" alt="">
+                        <div class="checkout-money-payway checkoyt-add-gp-root">
+                            <img class="payway-add paywayroot" src="image/payway-add.svg" alt="">
                             <div class="checkout-payway-gp">
                                 <div class="checkout-payway-small-gp">
                                     <p class="subtitle1 color-dark5">新增付款方式</p>
                                 </div>
+                            </div>
+                            <div class="popup-choose-checkoutway">
+                                <div class="popup-checkoutway-gp">
+                                    <button class="chekout-choose-shopway subtitle1 checkout-input-cash-popup">現金</button>
+                                    <button class="chekout-choose-shopway subtitle1 checkout-input-creditcard-popup">信用卡</button>
+                                    <button class="chekout-choose-shopway subtitle1 checkout-input-another-popup">其他</button>
+                                </div>
+                                <img src="image/popup-right-triango.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -545,7 +582,7 @@
                         <button  class="button_mid color-purple checkout-order">
                             <p class="subtitle2 color-white">預定</p>
                         </button>
-                        <button  class="button_mid primary-color checkout-finish">
+                        <button  class="button_mid primary-color checkout-finish page_back">
                             <p class="subtitle2 color-white">結帳</p>
                         </button>
                     </div>
@@ -683,7 +720,7 @@
             <div class="menu">
                 <div class="menu-header">
                     <div class="menu-header-icongroup">
-                        <img src="image/ham.svg" alt="">
+                        <img class="btn-ham" src="image/ham.svg" alt="">
                     </div>
                     <div class="menu-header-allitem-left">
                         <p class="title2 ">所有商品</p>
