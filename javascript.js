@@ -357,11 +357,19 @@ $('.menu-grid-item.shop1').click(function(){
     $('#tax-ID-num,.rwd-text').bind('input propertychange', fun); //propertychange属性改变事件
 });
 
-// 點選信用卡欄時觸發inputtext
+// 點選购物方式时欄時觸發inputtext
 $('.checkout-payblock-creditcard').click(function(){
-  // alert("幹幹幹");
   $('#checkout-credit-card-amount').hover();
 })
+$('.checkout-payblock-cash').click(function(){
+  $('#checkout-cash-amount').hover();
+})
+$('.checkout-payblock-another').click(function(){
+  $('#checkout-another-amount').hover();
+})
+// $('.checkout-payblock-creditcard').click(function(){
+//   $('#checkout-credit-card-amount').hover();
+// })
 
 var val = $('.checkout-money-title').html();
 val = val.replace(/[^\d]/g,'');
@@ -369,7 +377,7 @@ var sumvalue;
   //輸入值時做總數加減
 $(".checkout-payment-num").bind("input propertychange",function(event)
 {   
-  sumvalue = val - Number($('#checkout-credit-card-amount').val())
+  sumvalue = val - Number($('#checkout-credit-card-amount').val()) - Number($('#checkout-cash-amount').val()) - Number($('#checkout-another-amount').val());
     $('.check-out-payment-sum').text(
       sumvalue*-1
       +" $"
