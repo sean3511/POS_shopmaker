@@ -121,6 +121,13 @@ body{
 }
 .page-client-right-area{
     flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+}
+.client-list-item-gp{
+    flex: 1 1 0;
+    display: grid;
+    padding: 16px;
 }
 .cutomer-order-inform{
     display: flex;
@@ -357,7 +364,21 @@ input[type=radio] { display: none }
     background: rgba(255, 255, 255, 0.25);
     border-left: #009EF7 10px solid;
 }
-
+.client-label-gp{
+    display: flex;
+    flex-direction: column;
+}
+.client-label-gp label{
+    color: #7F7F7F;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 24px 16px;
+    border-bottom: 1px solid #E2E2E2;
+}
+.client-label-gp input[type="radio"]:checked+label{
+    background: rgba(255, 255, 255, 0.25);
+    border-left: #009EF7 10px solid;
+}
 .shop-car-list-GP input[type="radio"]:checked+label { 
     color: #009EF7;
 }
@@ -584,6 +605,14 @@ height: 18px;
     grid-template-columns: repeat(4, 1fr);
     padding: 24px;
     gap: 24px;
+}
+.client-grid-gp{
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 16px;
+    border-left:1px solid #E2E2E2 ;
 }
 .member-popup-grid-item{
     height: 175px;
