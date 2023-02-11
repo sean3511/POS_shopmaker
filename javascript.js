@@ -5,8 +5,6 @@
  var shop4_amount = 0;
  var payway_counter = 0;
 
-
-
  $(document).ready(function(){
 
   if(shop_car_amount==0){
@@ -17,6 +15,41 @@
   $(".cashier-btn").addClass("btn_glad_mode");
   $(".cashier-btn p").html("NO SELL");
 });
+
+  //開關分頁區域
+  $('#ham-dashboard').click(function(){
+    $('#Page-dashboard').show();
+    $('#Page-cashier').hide();
+    $('#Page-customer').hide();
+    $('#Page-client').hide();
+    $('#overlay').fadeOut(500);
+    $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
+  });
+  $('#ham-cashier').click(function(){
+    $('#Page-cashier').show();
+    $('#Page-dashboard').hide();
+    $('#Page-customer').hide();
+    $('#Page-client').hide();
+    $('#overlay').fadeOut(500);
+    $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
+  });
+  $('#ham-check-customer').click(function(){
+    $('#Page-customer').show();
+    $('#Page-cashier').hide();
+    $('#Page-dashboard').hide();
+    $('#Page-client').hide();
+    $('#overlay').fadeOut(500);
+    $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
+  });
+  $('#ham-client').click(function(){
+    $('#Page-client').show();
+    $('#Page-customer').hide();
+    $('#Page-cashier').hide();
+    $('#Page-dashboard').hide();
+    $('#overlay').fadeOut(500);
+    $('.ham-list-panel').hide('slide', {direction: 'left'}, 500);
+  });
+  //開關分頁區域
   // 刪除商品
   $('.cashier-shop-itemsGP').on('click', '.remove-item', function(){
     $('#overlay').fadeOut(100);
@@ -121,6 +154,7 @@ $('.payway-add').click(function(){
     $(".checkoyt-add-gp-root").show();
   }
   $('.popup-choose-checkoutway').fadeIn(100);
+  $('.popup-checkoutway-gp').find(".chekout-choose-shopway:visible").css("border-bottom",'1px solid #E2E2E2');
   $('.popup-checkoutway-gp').find(".chekout-choose-shopway:visible").last().css("border-bottom",'none');
   // 判定是否有新增渠道來決定popup按鈕開關
   if( $('.payway-cash').is(":visible")){
@@ -200,8 +234,15 @@ $('.btn-checkout-add-member').click(function(){
 $('.cashier-btn').click(function(){
   $('#Page-checkout').show('slide', {direction: 'right'}, 500).css("display","flex");
 });
+// 開啟顧客詳細清單
+$('.customer-shop-history-item').click(function(){
+  $('#Page-customer-order-inform').show('slide', {direction: 'right'}, 500);
+});
 // 開啟顧客詳細資訊
 $('.customer-inform-group').click(function(){
+  $('#Page-customer-inform').show('slide', {direction: 'right'}, 500);
+});
+$('.customer-list-item').click(function(){
   $('#Page-customer-inform').show('slide', {direction: 'right'}, 500);
 });
 // 開啟ham
@@ -217,6 +258,10 @@ $('.btn-ham-return').click(function(){
 $('.page_back').click(function(){
   $('#Page-customer-inform').hide('slide', {direction: 'right'}, 500);
   $('#Page-checkout').hide('slide', {direction: 'right'}, 500);
+});
+// 第二層的關閉，不會跟第一層重疊
+$('.page_back_layer2').click(function(){
+  $('#Page-customer-order-inform').hide('slide', {direction: 'right'}, 500);
 });
 // 結帳畫面返回選擇結帳方式頁面
 $('.checkout-return').click(function(){

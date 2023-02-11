@@ -22,11 +22,11 @@
                     <img class="btn-ham-return" src="image/ham-store-arrow-right.svg" alt="" style="height: 20px;">
                 </div>
                 <div class="ham-label-gp">
-                    <input type="radio" id="ham-dashboard" name="ham-panel"checked>
+                    <input type="radio" id="ham-dashboard" name="ham-panel">
                     <label for="ham-dashboard">Dashboard</label>
 
-                    <input type="radio" id="ham-checkout" name="ham-panel">
-                    <label for="ham-checkout">收銀台</label>
+                    <input type="radio" id="ham-cashier" name="ham-panel" checked>
+                    <label for="ham-cashier">收銀台</label>
 
                     <input type="radio" id="ham-order-history" name="ham-panel">
                     <label for="ham-order-history">訂單紀錄</label>
@@ -589,6 +589,39 @@
                 </div>
             </div>
         </div>
+        <div id="Page-customer-order-inform">
+            <div class="popup-client-title_GP display-flex-spacebetween">
+                <img class="page_back_layer2" src="image/left-arrow-blue.svg" alt="">
+                <p class="subtitle1 center-absolute">交易明細</p>
+            </div>
+            <div class="cutomer-order-inform">
+                <p class="body1">06-12 12:02 下午</p>
+                <div class="cutomer-order-inform-fontgp">
+                    <img src="image/order-num-icon.svg" alt="" style="width:24px; height: 24px;">
+                    <p class="body1">3049985059186364791</p>
+                </div>
+                <div class="cutomer-order-inform-fontgp">
+                    <img src="image/order-icon.svg" alt="" style="width:24px; height: 24px;">
+                    <p class="body1">3049985059186364791</p>
+                </div>
+            </div>
+        </div>
+        <div id="Page-client">
+            <div class="page-client-left-area">
+                <div class="menu-header">
+                    <div class="menu-header-icongroup">
+                        <img class="btn-ham" src="image/ham.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page-client-right-area">
+                <div class="menu-header">
+                    <div class="center-absolute">
+                        <p class="title2 ">員工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="Page-customer-inform">
             <div class="popup-client-title_GP display-flex-spacebetween">
                 <img class="page_back" src="image/left-arrow-blue.svg" alt="">
@@ -716,6 +749,244 @@
                 </div>
             </div>
         </div>
+        <div id="Page-dashboard"> 
+            <div class="menu-header">
+                <div class="menu-header-icongroup">
+                    <img class="btn-ham" src="image/ham.svg" alt="">
+                </div>
+                <div class="center-absolute">
+                    <p class="title2 ">台中車站店</p>
+                </div>
+            </div>
+            <div class="dashboard-panel-gp">
+                <div class="dashboard-panel-row">
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-big-01.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title1">$14,736</p>
+                            <p class="title2">本日銷售額</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-big-02.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title1">$14,736</p>
+                            <p class="title2">本月銷售額</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-big-03.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title1">$14,736</p>
+                            <p class="title2">總累計銷售額</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-panel-row">
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-small-01.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title2">$14,736</p>
+                            <p class="title2">本日淨利</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-small-02.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title2">$14,736</p>
+                            <p class="title2">本月淨利</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-big-item">
+                        <img src="image/dash-small-03.svg" alt="" style="width: 60px;">
+                        <div class="dashboard-font-gp">
+                            <p class="title2">$14,736</p>
+                            <p class="title2">總累計淨利</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Page-customer">
+            <div class="menu-header">
+                <div class="menu-header-icongroup">
+                    <img class="btn-ham" src="image/ham.svg" alt="">
+                </div>
+                <div class="center-absolute">
+                    <p class="title2 ">顧客列表</p>
+                </div>
+            </div>
+            <div class="search-bar-customer">
+                <div class="search-bar-GP">
+                    <div class="search-bar-GP-left">
+                        <img src="image/search-normal-blue.svg.svg" alt="">
+                        <input class="body1 color-dark5" type="text" id="fname" name="fname" placeholder="搜尋交易號碼或掃描號碼">
+                    </div>
+                </div>
+            </div>
+            <div class=page-customer-list-gp>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+                <div class="customer-list-item">
+                    <div class="customer-list-item-left-gp">
+                        <p class="title1">Annie</p>
+                        <div class="customer-list-item-font-gp">
+                            <p class="subtitle2 color-dark4">+886-091234567</p>
+                            <p class="subtitle2 color-dark4">ggyygyg@gmail.com</p>
+                        </div>
+                    </div>
+                    <img src="image/customer-item-arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
         <div id="Page-cashier">
             <div class="menu">
                 <div class="menu-header">
@@ -735,7 +1006,7 @@
                 <div class="search-bar">
                     <div class="search-bar-GP">
                         <div class="search-bar-GP-left">
-                            <img src="image/search-black.svg" alt="">
+                            <img src="image/search-normal-blue.svg.svg" alt="">
                             <input class="body1 color-dark5" type="text" id="fname" name="fname" placeholder="搜尋(商品名稱/貨號/關鍵字)">
                         </div>
                         <div class="search-bar-GP-right">
